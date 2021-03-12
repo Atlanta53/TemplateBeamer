@@ -5,31 +5,53 @@
 \subtitle{The Subtitle}
 \date{\today}
 \author{Author1 Author2 ...}
-\institute{Institute}
+\supervisor{Supervisor}
+\logopath{res/logo}
 
 \begin{document}
 	
 	\begin{frame}%
 		\titlepage
 	\end{frame}
-	
+
 	\begin{frame}%
+		\frametitle{Table of contents}
+		\tableofcontents
+	\end{frame}
+
+	\section{Section 1}
+	
+	\begin{frame}[fragile]
 		\frametitle{Title 1} 
 		\framesubtitle{Subtitle 1.} 
-		some text
-	\end{frame}
-	
-	\begin{frame}%
-		\frametitle{Title 2} 
-		\framesubtitle{Subtitle 2.}  
-		some text
-	\end{frame}
-	
-	\begin{frame}%
-		\frametitle{Title 3} 
-		\framesubtitle{Subtitle 3.} 
 		
-		some text
-	\end{frame}
+		\begin{multicols}{2}
+			
+			\begin{TextColor}{TextColor block}{orange}
+				\begin{List}{orange}
+					\item some item
+					\item some item
+				\end{List}
+			\end{TextColor}
+
+\begin{CodeListings}{Code block}{c++}
 	
+int i = 0; // Listings
+
+std::cout << i << std::endl;
+\end{CodeListings}
+
+			\columnbreak
+			
+			\begin{Text}{Text block}\newline
+				some text
+			\end{Text}
+		
+			\image{res/titlepage}{1}
+		\end{multicols}
+		
+
+	
+	\end{frame}
+
 \end{document}
