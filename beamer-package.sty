@@ -1,4 +1,4 @@
-\usepackage[english]{babel}
+\usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
@@ -12,14 +12,11 @@
 \usepackage{etoolbox}
 \usepackage{pifont}
 \usepackage{enumitem}
-\usepackage{hyperref}
-
 
 \usetikzlibrary{calc, intersections, positioning}
 \tcbuselibrary{skins, breakable, listingsutf8, xparse}
 
 \definecolor{mainColor}{RGB}{14, 120, 255}
-\newcommand{\mainColor}{mainColor}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28,36 +25,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamercolor{author in head/foot}{fg=gray, bg=black}
+\setbeamercolor{author in head/foot}{fg=mainColor, bg=white}
 \setbeamerfont{author in head/foot}{size=\large}
+
 
 \def\footline{}
 
 \ifdefined\footline
 
-	\setbeamertemplate{footline}{%
-		\leavevmode%
-		\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{author in head/foot}%
-				\usebeamerfont{author in head/foot}
-				\insertslidenavigationsymbol
-				\insertframenavigationsymbol
-				\insertsubsectionnavigationsymbol
-				\insertsectionnavigationsymbol
-				\insertdocnavigationsymbol
-				\insertbackfindforwardnavigationsymbol
-				\hfill
-				\insertframenumber
-		\end{beamercolorbox}}%
-		\vskip0pt%
-	}
+\setbeamertemplate{footline}{%
+	\leavevmode%
+	\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{author in head/foot}%
+			\usebeamerfont{author in head/foot}
+			\insertslidenavigationsymbol
+			\insertframenavigationsymbol
+			\insertsubsectionnavigationsymbol
+			\insertsectionnavigationsymbol
+			\insertdocnavigationsymbol
+			\insertbackfindforwardnavigationsymbol
+			\hfill
+			\insertframenumber
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
 
 \else
-	
-	\setbeamertemplate{footline}{}
+
+\setbeamertemplate{footline}{}
 \fi
-
-
-
 
 %%%% Definition of the Title frame %%%%
 
@@ -78,8 +73,8 @@
 
 \setbeamertemplate{title page}{%
 	\begin{tikzpicture}[overlay, remember picture]
-		\fill [color=\mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
-		\fill [color=\mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
+		\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
+		\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
 		\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.7)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
 		\fill [color=orange] ($(current page.north west)+(2.7, -2.7)$) -- ($(current page.north east)+(-13.2, -2.7)$)  -- ($(current page.north east)+(-14.35, -6)$) -- ($(current page.north west)+(1.55, -6)$);
 		\node[xshift=-3cm, yshift=-1.25cm] at (current page.north east){%
@@ -108,7 +103,7 @@
 	\end{beamercolorbox}
 	
 	\vspace{0.7cm}
-	\hspace{1cm}\textcolor{orange}{\textbf{Supervisor(s)}\;\;}
+	\hspace{1cm}\textcolor{orange}{\textbf{Superviseur}\;\;}
 	\vspace{0.2cm}
 	
 	\begin{beamercolorbox}[wd=\paperwidth]{supervisor}
@@ -117,7 +112,7 @@
 	\end{beamercolorbox}
 	
 	\vspace{0.3cm}
-	\hspace{1cm}\textcolor{orange}{\textbf{Student(s)}\quad} 
+	\hspace{1cm}\textcolor{orange}{\textbf{Etudiant(s)}\quad} 
 	\vspace{0.2cm}
 	
 	\begin{beamercolorbox}[wd=\paperwidth]{author}
@@ -136,7 +131,7 @@
 \setbeamertemplate{frametitle}{
 	\begin{tikzpicture}[overlay, remember picture]
 		\fill [color=orange] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2, -1.5)$) -- ($(current page.north west)+(0, -1.5)$);
-		\fill [color=\mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.2, -1.5)$) -- ($(current page.north east)+(0, -1.5)$);
+		\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.2, -1.5)$) -- ($(current page.north east)+(0, -1.5)$);
 		\node[xshift=-1.5cm, yshift=-0.7cm] at (current page.north east){%
 			\includegraphics[width=3cm]{\@logopath}};
 	\end{tikzpicture}
@@ -154,16 +149,16 @@
 	\vspace{0.6cm}  
 }
 
-\setbeamertemplate{section in toc}{\color{\mainColor}\textbf{\inserttocsectionnumber.~\inserttocsection}}
+\setbeamertemplate{section in toc}{\color{mainColor}\textbf{\inserttocsectionnumber.~\inserttocsection}}
 
 \AtBeginSection[]{
 	\begin{frame}
 		\begin{tikzpicture}[overlay, remember picture]
-			\fill [color=\mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
-			\fill [color=\mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
+			\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
+			\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
 			\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.7)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
 			\fill [color=orange] ($(current page.north west)+(2.7, -2.7)$) -- ($(current page.north east)+(-13.2, -2.7)$)  -- ($(current page.north east)+(-14.35, -6)$) -- ($(current page.north west)+(1.55, -6)$);
-			\fill [color=\mainColor] ($(current page.south east)+(0, 3.9)$) -- ($(current page.south west)+(1.55, 3.9)$)  --($(current page.south west)+(0.1, 0)$) -- (current page.south east);
+			\fill [color=mainColor] ($(current page.south east)+(0, 3.9)$) -- ($(current page.south west)+(1.55, 3.9)$)  --($(current page.south west)+(0.1, 0)$) -- (current page.south east);
 			\node[xshift=-3cm, yshift=-1.25cm] at (current page.north east){%
 				\includegraphics[width=6cm]{\@logopath}};
 		\end{tikzpicture}
@@ -198,7 +193,7 @@
 	boxrule=0pt,
 	frame hidden,
 	sharp corners,
-	borderline north={1mm}{0mm}{\mainColor},
+	borderline north={1mm}{0mm}{mainColor},
 	left=3mm, right=3mm, top=4mm, bottom=4mm,
 	coltitle=mainColor,
 	adjusted title=\n,
@@ -232,7 +227,7 @@
 	boxrule=0pt,
 	frame hidden,
 	sharp corners,
-	borderline north={1mm}{0mm}{\mainColor},
+	borderline north={1mm}{0mm}{mainColor},
 	left=3mm, right=3mm, top=4mm, bottom=4mm,
 	colupper=black,
 	listing only,
@@ -252,11 +247,12 @@
 	every listing line={
 		%\textcolor{red}{\small\ttfamily\bfseries>}
 	},
-	coltitle=\mainColor,
+	coltitle=mainColor,
 	adjusted title=\n,
 	fonttitle=\bfseries,
 	title=#1,
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -274,31 +270,5 @@
 	\begin{center}
 		\includegraphics[width=#2\linewidth]{#1}
 	\end{center}
+	
 }
-
-\hypersetup{
-	colorlinks=true,       % false: liens encadrés; true: liens colorés
-	linkcolor=black,          % couleur des liens (ou bordures) internes
-	citecolor=blue,        % couleur des liens (ou bordures) vers bilbio
-	filecolor=blue,      % couleur des liens (ou bordures) vers fichiers
-	urlcolor=orange          % couleur des liens (ou bordures) url
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%% Definition of mathematics space %%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\K}{\mathbb{K}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\U}{\mathbb{U}}
-\newcommand{\M}{\mathcal{M}}	
-\newcommand{\X}{\mathcal{X}}
-\newcommand{\B}{\mathcal{B}}
-\newcommand{\D}{\mathcal{D}}
-\newcommand{\I}{\mathcal{I}}
-\newcommand{\V}{\mathcal{V}}
-\newcommand{\Cc}{\mathcal{C}}
