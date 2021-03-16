@@ -73,10 +73,10 @@
 
 \setbeamertemplate{title page}{%
 	\begin{tikzpicture}[overlay, remember picture]
-		\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
+		\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.5, -2.6)$) -- (current page.south west);
 		\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
-		\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.7)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
-		\fill [color=orange] ($(current page.north west)+(2.7, -2.7)$) -- ($(current page.north east)+(-13.2, -2.7)$)  -- ($(current page.north east)+(-14.35, -6)$) -- ($(current page.north west)+(1.55, -6)$);
+		\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.6)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
+		\fill [color=orange] ($(current page.north west)+(2.65, -2.75)$) -- ($(current page.north west)+(2.75, -2.75)$)  -- ($(current page.north west)+(1.7, -5.85)$) -- ($(current page.north west)+(1.6, -5.85)$);
 		\node[xshift=-3cm, yshift=-1.25cm] at (current page.north east){%
 			\includegraphics[width=6cm]{\@logopath}};
 	\end{tikzpicture}
@@ -130,8 +130,8 @@
 
 \setbeamertemplate{frametitle}{
 	\begin{tikzpicture}[overlay, remember picture]
-		\fill [color=orange] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2, -1.5)$) -- ($(current page.north west)+(0, -1.5)$);
-		\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.2, -1.5)$) -- ($(current page.north east)+(0, -1.5)$);
+		\fill [color=orange] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(1.85, -1.5)$) -- ($(current page.north west)+(0, -1.5)$);
+		\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.05, -1.5)$) -- ($(current page.north east)+(0, -1.5)$);
 		\node[xshift=-1.5cm, yshift=-0.7cm] at (current page.north east){%
 			\includegraphics[width=3cm]{\@logopath}};
 	\end{tikzpicture}
@@ -154,11 +154,11 @@
 \AtBeginSection[]{
 	\begin{frame}
 		\begin{tikzpicture}[overlay, remember picture]
-			\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.6, -2.7)$) -- (current page.south west);
+			\fill [color=mainColor!50] (current page.north west) -- ($(current page.north west)+(1, 0)$)  -- ($(current page.north west)+(2.5, -2.6)$) -- (current page.south west);
 			\fill [color=mainColor] (current page.north east) -- ($(current page.north west)+(1.2, 0)$)  --($(current page.north west)+(2.7, -2.6)$) -- ($(current page.north east)+(0, -2.6)$);
-			\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.7)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
-			\fill [color=orange] ($(current page.north west)+(2.7, -2.7)$) -- ($(current page.north east)+(-13.2, -2.7)$)  -- ($(current page.north east)+(-14.35, -6)$) -- ($(current page.north west)+(1.55, -6)$);
-			\fill [color=mainColor] ($(current page.south east)+(0, 3.9)$) -- ($(current page.south west)+(1.55, 3.9)$)  --($(current page.south west)+(0.1, 0)$) -- (current page.south east);
+			\fill [color=white, fill opacity=0.7] ($(current page.north west)+(0, -2.6)$) -- ($(current page.north east)+(0, -2.7)$)  -- ($(current page.north east)+(0, -6)$) -- ($(current page.north west)+(0, -6)$);
+			\fill [color=orange] ($(current page.north west)+(2.65, -2.75)$) -- ($(current page.north west)+(2.75, -2.75)$)  -- ($(current page.north west)+(1.7, -5.85)$) -- ($(current page.north west)+(1.6, -5.85)$);
+			\fill [color=mainColor] ($(current page.south east)+(0, 4)$) -- ($(current page.south west)+(1.55, 4)$)  --($(current page.south west)+(0.2, -0.1)$) -- (current page.south east);
 			\node[xshift=-3cm, yshift=-1.25cm] at (current page.north east){%
 				\includegraphics[width=6cm]{\@logopath}};
 		\end{tikzpicture}

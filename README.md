@@ -53,7 +53,7 @@ I implemented 2 types of blocks:
 ### Image
 
 ```
-\image{Path}{Title}{Scale}
+\image{Path}{Scale}
 ```
 
 ### List
